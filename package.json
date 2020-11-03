@@ -23,7 +23,7 @@
     ],
     "license": "MIT",
     "bin": {
-        "har-download": "bin/har-down"
+        "har-downl": "bin/har-down"
     },
     "engines": {
         "node": ">= 4.0.0"
