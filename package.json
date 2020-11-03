@@ -2,7 +2,7 @@
     "name": "har-down",
     "readmeFilename": "README.md",
     "description": "har download 从 chrome 生成的 har 文件中下载整个网站所有资源",
-    "version": "1.0.4",
+    "version": "2.0.0",
     "author": {
         "name": "wshxbqq",
         "email": "wshxbqq@gmail.com"
