@@ -12,7 +12,7 @@ har.fromText(
 	distPath,
 	function(err) {
     console.log(err);
-		har.formFile(path.join(__dirname, "demo.HAR"), path.join(__dirname, "dist1"), function(err) {
+		har.formFile(path.join(__dirname, "demo.har"), path.join(__dirname, "dist1"), function(err) {
 			console.log(err);
 		});
 	}

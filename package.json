@@ -37,6 +37,8 @@
     },
     "preferGlobal": true,
     "dependencies": {
+        "bluebird": "^3.7.2",
+        "chalk": "^4.1.0",
         "mkdirp": "^0.5.1",
         "request": "^2.63.0"
     }

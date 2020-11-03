@@ -5,7 +5,12 @@
 
 # har-download 从 HAR 文件下载整个网站资源
 
-Download all resources from HAR file 
+## fork之后增加
+- 下载进度显示
+- 又之前的单线程改为默认12线程下载
+- 下载完成之后给出统计信息
+
+Download all resources from HAR file
 
 ```bash
 har-download  demo.HAR  export/folder
