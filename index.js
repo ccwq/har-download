@@ -110,7 +110,11 @@ function download(task, callback) {
 				}
 			}, TIME_OUT);
 
-			req.pipe(fs.createWriteStream(`${task.dirName}/${task.fileName}.${task.extName}`))
+			req.pipe(
+				fs.createWriteStream(
+					`${task.dirName}/${task.fileName}.${task.extName}`
+				)
+			)
 				.on('error', function(err) {
 					// callback(err);
 					resolve({err, task});
