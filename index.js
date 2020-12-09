@@ -59,14 +59,23 @@ function getTasks(jsonText, dist) {
         if (urlObj.pathname.slice(-1) == '/') {
             urlObj.pathname += "index";
         }
+
+
         let dirName = path.dirname(urlObj.pathname);
         dirName = path.join(dist, urlObj.host, dirName);
+
+		dirName = dirName.replace(/\:/g, "/");
+
 
         let fileName = path.basename(urlObj.pathname);
         fileName = fileName.replace(path.extname(fileName), "");
 
         let extName = eobj.response.content.mimeType.match(/\w*?$/) || [];
         extName = mapMimiType(extName[0]);
+
+
+
+
 		let t = {
 			url: eobj.request.url,
 			dirName: dirName,
@@ -76,6 +85,11 @@ function getTasks(jsonText, dist) {
 			raw: eobj,
 			index: i,
 		};
+
+		if (t.url.startsWith("ws")) {
+			continue;
+		}
+
         tasks.push(t);
     }
     return tasks;
